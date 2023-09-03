@@ -8,6 +8,8 @@
 - Sign up form
 - Form Validation
 - useRef Hook
+- Firebase setup
+- Deploying our app to production
 
 # Features
 
@@ -24,5 +26,12 @@
     - Title and Description
 
 - NetflixGPT
+
   - Searchbar
   - Movie Suggestions
+
+  #
+
+  => Created Login and sign up page
+  => then Build form validation functionality
+  => Authentication using Firebase
