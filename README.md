@@ -3,7 +3,7 @@
 - Create-react-app
 - Configured TailwindCSS
 - Header
-- Routing of App
+- Routing of App - setting the route for our app
 - Login form
 - Sign up form
 - Form Validation
@@ -12,6 +12,7 @@
 - Deploying our app to production
 - sign up and sing in Authentication
 - installing redux toolkit
+- implemented sign out logic
 
 # Features
 
