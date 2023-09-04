@@ -10,6 +10,8 @@
 - useRef Hook
 - Firebase setup
 - Deploying our app to production
+- sign up and sing in Authentication
+- installing redux toolkit
 
 # Features
 
