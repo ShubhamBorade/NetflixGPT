@@ -13,6 +13,12 @@
 - sign up and sing in Authentication
 - installing redux toolkit
 - implemented sign out logic
+- BugFix: if the user is not logged in then redirect him from /browse page to login page and vice versa.(we did this inside onAuthStateChanged)
+- unsubscribed to onAuthStateChanged when component unmounts
+- added hardcoded data into constants file
+- Register in TMDB and get the access token from there
+- fetch the data from now playing movie API and
+- Storing the movies data to redux store by using custom hook i.e useNowPlayingMovies
 
 # Features
 

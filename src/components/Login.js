@@ -4,7 +4,6 @@ import { useState,useRef } from 'react'
 import { checkValidateData } from '../utils/validate'
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase"
-import {useNavigate} from "react-router-dom"
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 
@@ -13,7 +12,7 @@ const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
     const [errorMessage,setErrorMessage] = useState(null);
     
-    const navigate = useNavigate()
+
     const dispatch = useDispatch()
 
     const toggleSignInForm = () =>{
@@ -44,16 +43,16 @@ const Login = () => {
             .then((userCredential) => {
              
               const user = userCredential.user;
-
+              // once the user is registered over firebase then we are simply updating the data over redux store
               updateProfile(auth.currentUser, {
                 displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/67215417?v=4"
               }).then(() => {
-                // Profile updated!
+                
                 const {uid,email,displayName,photoURL} = auth.currentUser;
 
                 dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}))
-                
-                navigate('/browse'); //after successful singUp we will take user to browse page
+
+               
               }).catch((error) => {
                 // An error occurred
                 setErrorMessage(error.message)
@@ -68,12 +67,14 @@ const Login = () => {
               setErrorMessage(errorCode + " -" + errorMessage);
             });
       }else{
+        //sign in logic
+
          signInWithEmailAndPassword(auth, email.current.value,password.current.value)
         .then((userCredential) => {
          
           const user = userCredential.user;
           console.log(user);
-          navigate('/browse'); //after successful signIn we are taking the user to browse page
+     
         })
         .catch((error) => {
           const errorCode = error.code;
