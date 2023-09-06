@@ -12,13 +12,13 @@ const MainContainer = () => {
     const mainMovie = movies[0];
     console.log(mainMovie)
     
-    const {original_title,overview} = mainMovie;
+    const {original_title,overview,id} = mainMovie; //we are extracting details of a movie which is at index zero so that we can play his traler on home page
 
     return (
         <div>
             <h1>Maincontainer</h1>
             <VideoTitle title={original_title} overview={overview}/>
-            <VideoBackground/>
+            <VideoBackground movieId={id}/>
         </div>
     )
 }
