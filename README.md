@@ -19,6 +19,8 @@
 - Register in TMDB and get the access token from there
 - fetch the data from now playing movie API and
 - Storing the movies data to redux store by using custom hook i.e useNowPlayingMovies
+- buiding Maincontainer,created useMovieTrailer hook to fetch, filter movies with type =trailer and then put it them to redux store
+- embeded youtube video and make it autoplay and mute
 
 # Features
 
