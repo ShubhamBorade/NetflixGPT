@@ -21,6 +21,11 @@
 - Storing the movies data to redux store by using custom hook i.e useNowPlayingMovies
 - buiding Maincontainer,created useMovieTrailer hook to fetch, filter movies with type =trailer and then put it them to redux store
 - embeded youtube video and make it autoplay and mute
+- Building secondary component
+- Build MovieList
+- Build MovieCard
+- find out TMDB Image CDN URL
+- created custom hook usePopularMovies,useUpComingMovies,useTopRatedMovies to fetch popular moves and stored them to redux and then selecting them to show on UI
 
 # Features
 
