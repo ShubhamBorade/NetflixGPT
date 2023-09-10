@@ -26,6 +26,10 @@
 - Build MovieCard
 - find out TMDB Image CDN URL
 - created custom hook usePopularMovies,useUpComingMovies,useTopRatedMovies to fetch popular moves and stored them to redux and then selecting them to show on UI
+- GPT Search Feature
+- Creating GPT Search componenet
+- creating GPT Search Bar
+- Multi-lanuage feature in our app
 
 # Features
 
