@@ -30,6 +30,8 @@
 - Creating GPT Search componenet
 - creating GPT Search Bar
 - Multi-lanuage feature in our app
+- get the movie names from GPT and serach it in TMDB search API
+- then store that movies into redux store along with movie names
 
 # Features
 
