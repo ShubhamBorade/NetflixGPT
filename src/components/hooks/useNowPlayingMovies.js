@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addNowPlayingMovies } from "../../utils/movieSlice";
 import { useEffect } from "react";
 import { API_OPTIONS } from "../../utils/constants";
@@ -7,6 +7,10 @@ const useNowPlayingMovies = () => {
   //fetching the movies and storing the movies data into redux store.
 
   const dispatch = useDispatch();
+
+  const nowPlayingMovies = useSelector(
+    (store) => store.movies.nowPlayingMovies
+  );
 
   const getNowPlayingMovies = async () => {
     const data = await fetch(
@@ -19,7 +23,7 @@ const useNowPlayingMovies = () => {
   };
 
   useEffect(() => {
-    getNowPlayingMovies();
+    !nowPlayingMovies && getNowPlayingMovies(); //we will fetch the nowplayingmovies only when its there inside our store
   }, []);
 };
 

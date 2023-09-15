@@ -6,7 +6,7 @@ const MovieCard = ({ posterpath }) => {
   if (!posterpath) return null;
 
   return (
-    <div className="w-48 pr-4">
+    <div className="w-48 pr-4  hover:scale-105 transition cursor-pointer">
       <img src={IMG_CDN_URL + posterpath} alt="poster" />
     </div>
   );

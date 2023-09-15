@@ -8,7 +8,7 @@ const MovieList = ({ title, movies }) => {
       <div className="flex overflow-x-scroll no-scrollbar">
         <div className="flex">
           {/* // we are checking whenever there are movies then only map over it,
-          otherwise it will throuw error */}
+          otherwise it will throw error */}
           {movies &&
             movies.map((movie) => (
               <MovieCard key={movie.id} posterpath={movie.poster_path} />
