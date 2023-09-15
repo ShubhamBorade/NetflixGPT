@@ -30,8 +30,13 @@
 - Creating GPT Search componenet
 - creating GPT Search Bar
 - Multi-lanuage feature in our app
-- get the movie names from GPT and serach it in TMDB search API
+- get the movie names from GPT and search it in TMDB search API
 - then store that movies into redux store along with movie names
+- then using useSelector get that movies from store and showing them in UI
+- Memoization - to the hooks which are fetching the movies and storing to store
+- adding .env file to store API keys
+- lastly adding .env file to .gitignore
+- made site responsive
 
 # Features
 
