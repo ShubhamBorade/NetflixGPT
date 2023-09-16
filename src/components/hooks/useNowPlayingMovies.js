@@ -20,10 +20,11 @@ const useNowPlayingMovies = () => {
     const json = await data.json();
     // console.log(json)
     dispatch(addNowPlayingMovies(json.results));
+    console.log(json.results);
   };
 
   useEffect(() => {
-    !nowPlayingMovies && getNowPlayingMovies(); //we will fetch the nowplayingmovies only when its there inside our store
+    !nowPlayingMovies && getNowPlayingMovies(); //we will fetch the nowplayingmovies only when its not there inside our store(memoization)
   }, []);
 };
 
