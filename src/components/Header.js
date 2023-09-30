@@ -62,14 +62,14 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between">
-      <img className="w-48 " src={LOGO} alt="logo" />
+    <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full sm:flex justify-between">
+      <img className="w-48 max-[640px]:mx-auto " src={LOGO} alt="logo" />
       {/* it will show below code only when someone is signed in */}
       {user && (
-        <div>
+        <div className="max-[640px]:flex max-[640px]:justify-center">
           {showGptSearch && (
             <select
-              className="p-2 m-2 bg-gray-800 text-white"
+              className="p-2 m-2 bg-gray-800 text-white "
               onChange={handleLanguageChange}
             >
               {SUPPORTED_LANGUAGES.map((lang) => (
@@ -87,7 +87,7 @@ const Header = () => {
           </button>
           <button
             onClick={handleSignOut}
-            className="px-4 py-2 rounded text-white bg-red-500 mt-3 font-semibold hover:bg-red-600"
+            className="px-4 py-2 rounded text-white bg-red-500 md:mt-3 font-semibold hover:bg-red-600"
           >
             SignOut
           </button>

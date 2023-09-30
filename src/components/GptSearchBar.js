@@ -62,9 +62,9 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="pt-[10%] flex justify-center">
+    <div className="pt-[10%] flex justify-center max-[640px]:pt-[15%]">
       <form
-        className="w-1/2 bg-black grid grid-cols-12"
+        className="w-full sm:w-1/2 bg-black grid grid-cols-12"
         onSubmit={(e) => e.preventDefault()} // this will not allow our page to refresh when we click on submit button
       >
         <input
